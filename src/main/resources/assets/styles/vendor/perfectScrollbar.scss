@@ -1,0 +1,15 @@
+.ps__rail-y {
+  right: 0 !important;
+  left: auto !important;
+}
+.ps__thumb-y {
+  background-color: $default-white !important;
+}
+
+.ps__rail-y:hover {
+  background-color: $default-info !important;
+}
+.ps__rail-y.ps--clicking {
+  background-color: $default-info !important;
+  opacity: 0.3;
+}
