@@ -59,6 +59,8 @@ export default (function () {
   // ٍSidebar Toggle
   $('.sidebar-toggle').on('click', e => {
     $('.app').toggleClass('is-collapsed');
+    $('#uhgalter').toggleClass('logo-collapsed');
+    $('#fm').toggleClass('logo-collapsed');
     e.preventDefault();
   });
 
