@@ -3,13 +3,13 @@
   left: auto !important;
 }
 .ps__thumb-y {
-  background-color: $default-white !important;
+  background-color: $default-primary !important;
 }
 
 .ps__rail-y:hover {
-  background-color: $default-info !important;
+  background-color: $default-white !important;
 }
 .ps__rail-y.ps--clicking {
-  background-color: $default-info !important;
+  background-color: $default-white !important;
   opacity: 0.3;
 }

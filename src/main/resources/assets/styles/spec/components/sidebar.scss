@@ -147,7 +147,7 @@
     }
 
     .logo-text {
-      color: $default-white;
+      color: $default-primary;
     }
   }
 
@@ -410,6 +410,7 @@
       width: $offscreen-size;
 
       .sidebar-inner {
+
         .sidebar-logo {
           border-bottom: 1px solid $border-color;
           padding: 0 20px;
@@ -418,6 +419,7 @@
             .logo {
               //background-position: center left;
               //width: 150px;
+
             }
           }
         }
