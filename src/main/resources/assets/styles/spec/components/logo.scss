@@ -1,25 +1,42 @@
-.st0{fill:none;}
+.sidebar-logo {
+  background-color: $default-primary;
 
-#fm {
-  fill: $default-primary;
+  .logo {
+    .st0 {
+      fill: none;
+    }
 
-  @include between($breakpoint-md, $breakpoint-xl){
-    opacity: 0;
+    #fm, #uhgalter {
+      fill: $default-white;
+      @include between($breakpoint-md, $breakpoint-xl) {
+        opacity: 0;
+      }
+    }
+
+    #b {
+      fill: $default-white;
+    }
+
+    #r {
+      fill: $default-white;
+    }
+  }
+
+  &:hover {
+    background-color: $default-white;
+    transition: all 0.2s ease;
+
+    #r {
+      fill: $default-danger;
+      transition: all 0.2s ease;
+    }
+    #b, #fm, #uhgalter {
+      fill: $default-primary;
+      transition: all 0.2s ease;
+    }
   }
 }
-#r {
-  fill: $default-danger;
-}
-#b {
-  fill: $default-primary;
-}
-#uhgalter {
-  fill: $default-primary;
 
-  @include between($breakpoint-md, $breakpoint-xl){
-    opacity: 0;
-  }
-}
 .logo-collapsed {
   opacity: 0;
   transition: all 0.2s ease;
@@ -27,17 +44,28 @@
 
 //LOGO styles to sidebar
 
-.sidebar {
+.sidebar:hover {
   @include between($breakpoint-md, $breakpoint-xl) {
-    &:hover {
-      #fm {
-        opacity: 1;
-        transition: all 0.2s ease;
-      }
-      #uhgalter {
-        opacity: 1;
-        transition: all 0.2s ease;
-      }
+    #fm {
+      opacity: 1;
+      transition: all 0.2s ease;
+    }
+    #uhgalter {
+      opacity: 1;
+      transition: all 0.2s ease;
+    }
+
+  }
+  @include to($breakpoint-md) {
+    .logo-collapsed {
+      opacity: 1 !important;
+      transition: all 0.2s ease;
+    }
+  }
+  @include from($breakpoint-xl) {
+    .logo-collapsed {
+      opacity: 1 !important;
+      transition: all 0.2s ease;
     }
   }
 }

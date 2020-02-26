@@ -43,7 +43,7 @@
         float: left;
 
         > a {
-          color: $default-text-color;
+          color: $default-success;
           display: block;
           line-height: $header-height;
           min-height: $header-height;
@@ -56,7 +56,7 @@
 
           &:hover,
           &:focus {
-            color: $default-dark;
+            color: $default-primary;
             text-decoration: none;
           }
 

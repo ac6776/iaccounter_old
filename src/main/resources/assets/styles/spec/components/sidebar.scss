@@ -13,7 +13,7 @@
 // ---------------------------------------------------------
 
 .sidebar {
-  background-color: $default-white;
+  background-color: $default-primary;
   bottom: 0;
   overflow: hidden;
   position: fixed;
@@ -159,7 +159,7 @@
     line-height: calc(#{$header-height} - 1px);
 
     a {
-      color: $default-primary;
+      color: $default-white;
     }
 
     @include to($breakpoint-md) {
@@ -168,6 +168,14 @@
 
     @include between($breakpoint-md, $breakpoint-xl) {
       display: none;
+    }
+  }
+
+  &:hover {
+    .mobile-toggle {
+      a {
+        color: $default-primary;
+      }
     }
   }
 }
@@ -222,10 +230,10 @@
 
       &.open {
         > a {
-          color: $default-text-color;
+          color: $default-white;
 
           .icon-holder {
-            color: $default-info;
+            color: $default-white;
           }
 
           > .arrow {
@@ -248,16 +256,19 @@
     }
 
     a {
-      color: $default-success;
+      color: $default-white;
       transition: all 0.3s ease;
 
       &:hover,
-      &:focus {
-        color: $default-danger;
+      &:focus,
+      &.open {
+        //color: $default-danger;
         text-decoration: none;
+        font-weight: 600;
 
         .icon-holder {
           color: $default-primary;
+          background-color: $default-white;
         }
       }
     }
@@ -285,13 +296,18 @@
               &:hover,
               &:focus {
                 background-color: transparent;
-                color: $default-primary;
+                color: $default-white;
               }
             }
 
             &.actived {
+              font-weight: 600;
               a {
-                color: $default-primary;
+                color: $default-white;
+                .icon-holder {
+                  color: $default-primary;
+                  background-color: $default-white;
+                }
               }
             }
           }
@@ -301,8 +317,8 @@
 
     > a {
       display: block;
-      font-size: 1rem;
-      font-family: $font-bold-semi;
+      //font-size: 1rem;
+      font-family: $font-primary;
       padding: 5px 15px;
       position: relative;
       white-space: nowrap;
