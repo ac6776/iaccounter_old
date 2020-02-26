@@ -23,24 +23,21 @@
 .logo-collapsed {
   opacity: 0;
   transition: all 0.2s ease;
-
-  //@include between($breakpoint-md, $breakpoint-xl) {
-  //  opacity: 1;
-  //
-  //  #uhgalter, #fm {
-  //    opacity: 0 !important;
-  //    transition: all 0.2s ease;
-  //  }
-  //}
 }
 
-//@media screen and (max-width: 992px) {
-//  #uhgalter, #fm {
-//    opacity: 0;
-//    transition: all 0.2s ease;
-//  }
-//  .logo-collapsed {
-//    opacity: 1 !important;
-//    transition: all 0.2s ease;
-//  }
-//}
+//LOGO styles to sidebar
+
+.sidebar {
+  @include between($breakpoint-md, $breakpoint-xl) {
+    &:hover {
+      #fm {
+        opacity: 1;
+        transition: all 0.2s ease;
+      }
+      #uhgalter {
+        opacity: 1;
+        transition: all 0.2s ease;
+      }
+    }
+  }
+}
