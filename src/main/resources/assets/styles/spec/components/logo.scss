@@ -41,3 +41,21 @@
     }
   }
 }
+
+.is-collapsed {
+  .sidebar {
+    @include between($breakpoint-md, $breakpoint-xl) {
+      .logo-collapsed {
+        opacity: 1 !important;
+        transition: all 0.2s ease;
+      }
+    }
+
+    @include to($breakpoint-md) {
+      .logo-collapsed {
+        opacity: 1 !important;
+        transition: all 0.2s ease;
+      }
+    }
+  }
+}

@@ -407,11 +407,6 @@
     @include between($breakpoint-md, $breakpoint-xl) {
       width: $offscreen-size;
 
-      .logo-collapsed {
-        opacity: 1 !important;
-        transition: all 0.2s ease;
-      }
-
       .sidebar-inner {
 
         .sidebar-logo {
@@ -458,10 +453,6 @@
 
       .sidebar-logo{
         padding-left: 18px;
-      }
-
-      .logo-collapsed {
-        opacity: 1 !important;
       }
     }
   }
