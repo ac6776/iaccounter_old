@@ -258,16 +258,17 @@
     a {
       color: $default-white;
       transition: all 0.3s ease;
+      font-weight: 600;
 
       &:hover,
       &:focus,
       &.open {
         //color: $default-danger;
         text-decoration: none;
-        font-weight: 600;
+        //font-weight: 600;
 
         .icon-holder {
-          color: $default-primary;
+          color: $default-danger !important;
           background-color: $default-white;
         }
       }
