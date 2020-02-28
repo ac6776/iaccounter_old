@@ -1,0 +1,115 @@
+.sidebar-logo {
+  background-color: $default-white;
+
+  .logo {
+    .st0 {
+      fill: none;
+    }
+    #dots {
+      fill: $default-primary;
+      opacity: 0;
+
+      @include between($breakpoint-md, $breakpoint-xl) {
+        opacity: 1;
+      }
+    }
+
+    #fm, #uhgalter {
+      fill: $default-primary;
+      @include between($breakpoint-md, $breakpoint-xl) {
+        opacity: 0;
+      }
+    }
+
+    #b {
+      fill: $default-primary;
+    }
+
+    #r {
+      fill: $default-danger;
+    }
+  }
+
+//  &:hover {
+//    background-color: $default-white;
+//    transition: all 0.2s ease;
+//
+//    #r {
+//      fill: $default-danger;
+//      transition: all 0.2s ease;
+//    }
+//    #b, #fm, #uhgalter {
+//      fill: $default-primary;
+//      transition: all 0.2s ease;
+//    }
+//  }
+}
+
+.logo-collapsed {
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+//LOGO styles to sidebar
+
+.sidebar:hover {
+  @include between($breakpoint-md, $breakpoint-xl) {
+    #fm {
+      opacity: 1;
+      transition: all 0.2s ease;
+    }
+    #uhgalter {
+      opacity: 1;
+      transition: all 0.2s ease;
+    }
+    #dots {
+      opacity: 0;
+      transition: all 0.2s ease;
+    }
+
+  }
+  @include to($breakpoint-md) {
+    .logo-collapsed {
+      opacity: 1 !important;
+      transition: all 0.2s ease;
+    }
+  }
+  @include from($breakpoint-xl) {
+    .logo-collapsed {
+      opacity: 1 !important;
+      transition: all 0.2s ease;
+    }
+    #dots {
+      opacity: 0 !important;
+      transition: all 0.2s ease;
+    }
+  }
+}
+
+.is-collapsed {
+  .sidebar {
+    @include between($breakpoint-md, $breakpoint-xl) {
+      .logo-collapsed {
+        opacity: 1 !important;
+        transition: all 0.2s ease;
+      }
+      #dots {
+        opacity: 0;
+        transition: all 0.2s ease;
+      }
+    }
+
+    @include to($breakpoint-md) {
+      .logo-collapsed {
+        opacity: 1 !important;
+        transition: all 0.2s ease;
+      }
+    }
+    @include from($breakpoint-xl) {
+      #dots {
+        opacity: 1;
+        transition: all 0.2s ease;
+      }
+    }
+  }
+}
