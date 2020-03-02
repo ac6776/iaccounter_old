@@ -1,7 +1,7 @@
 import '../styles/index.scss';
 
-// import './masonry';
-// import './charts';
+import './masonry';
+import './charts';
 import './popover';
 import './scrollbar';
 import './search';
